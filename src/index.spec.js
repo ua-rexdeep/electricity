@@ -167,16 +167,16 @@ describe("Households + Power Plants", function () {
     });
 
     describe('complex network', () => {
-        const getRandomInt = (max = households.length) => {
-            return Math.floor(Math.random() * max);
-        }
-
         forEach([
             [10],
             [100],
         ]).it('Complex network %d', (size) => {
             const world = new World();
             const households = (new Array(size)).fill(undefined).map(() => world.createHousehold());
+
+            const getRandomInt = (max = size) => {
+                return Math.floor(Math.random() * max);
+            }
 
             const powerPlant1 = world.createPowerPlant();
             const powerPlant2 = world.createPowerPlant();
