@@ -185,7 +185,7 @@ describe("Households + Power Plants", function () {
             world.connectHouseholdToPowerPlant(households[getRandomInt()], powerPlant2);
 
             households.forEach((household, index) => {
-                world.connectHouseholdToHousehold(household, households[index === length - 1 ? 0 : index + 1])
+                world.connectHouseholdToHousehold(household, households[index === households.length - 1 ? 0 : index + 1])
             });
 
             world.connectHouseholdToHousehold(households[getRandomInt()], households[getRandomInt()])
