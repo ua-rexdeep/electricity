@@ -12,5 +12,6 @@
   "keywords": [],
   "devDependencies": {
     "mocha-each": "^2.0.1"
-  }
+  },
+  "license": "MIT"
 }
